@@ -1,20 +1,13 @@
-// script.js
-
-// Function to add a task
 function addTask() {
     const taskInput = document.getElementById('new-task');
     const taskList = document.getElementById('task-list');
     const taskValue = taskInput.value.trim();
-
     if (taskValue === '') return; // Avoid empty tasks
-
     const taskItem = document.createElement('li');
     const taskText = document.createElement('span');
     taskText.textContent = taskValue;
-    
     taskItem.appendChild(taskText);
-    
-    // Mark as completed
+
     taskText.addEventListener('click', () => {
         taskItem.classList.toggle('completed');
     });
